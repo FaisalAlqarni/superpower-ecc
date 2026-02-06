@@ -51,19 +51,6 @@ Quick, focused, no ceremony. Use when you know exactly what you need.
 **Best of Both Worlds:** Systematic workflows when you need structure. Quick tools when workflow is overkill.
 
 
-## Support the Original Authors
-
-This project builds on the excellent work of:
-
-**Superpowers by Jesse Vincent:**
-- Sponsor: [github.com/sponsors/obra](https://github.com/sponsors/obra)
-- Project: [github.com/obra/superpowers](https://github.com/obra/superpowers)
-
-**Everything Claude Code by Affaan Mustafa:**
-- Project: [github.com/affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code)
-- Twitter: [@affaanmustafa](https://x.com/affaanmustafa)
-
-
 ## Installation
 
 ### Quick Install (Recommended)
