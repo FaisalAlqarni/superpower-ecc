@@ -6,31 +6,8 @@
     "name": "Faisal Alqarni",
     "email": ""
   },
-  "contributors": [
-    {
-      "name": "Jesse Vincent",
-      "email": "jesse@fsck.com",
-      "role": "Original Superpowers author"
-    },
-    {
-      "name": "Affaan Mustafa",
-      "role": "Original Everything Claude Code author"
-    },
-    {
-      "name": "Faisal Alqarni",
-      "role": "Integration and enhancements"
-    }
-  ],
   "homepage": "https://github.com/FaisalAlqarni/superpower-ecc",
   "repository": "https://github.com/FaisalAlqarni/superpower-ecc",
-  "source_versions": {
-    "superpowers": "4.1.1",
-    "everything_claude_code": "1.4.1"
-  },
-  "original_projects": {
-    "superpowers": "https://github.com/obra/superpowers",
-    "everything_claude_code": "https://github.com/affaan-m/everything-claude-code"
-  },
   "license": "MIT",
   "keywords": [
     "integration",
