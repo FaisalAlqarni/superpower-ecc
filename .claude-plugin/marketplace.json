@@ -9,7 +9,7 @@
     {
       "name": "superpower-ecc",
       "description": "Integration of Superpowers and Everything Claude Code",
-      "version": "1.0.0",
+      "version": "1.0.2",
       "source": "./",
       "author": {
         "name": "Faisal Alqarni",
