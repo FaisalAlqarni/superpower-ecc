@@ -1,20 +1,14 @@
 {
-  "name": "superpowers-dev",
-  "description": "Development marketplace for Superpowers core skills library",
-  "owner": {
-    "name": "Jesse Vincent",
-    "email": "jesse@fsck.com"
-  },
+  "name": "superpower-ecc-marketplace",
+  "description": "Marketplace for Superpower-ECC plugin",
   "plugins": [
     {
-      "name": "superpowers",
-      "description": "Core skills library for Claude Code: TDD, debugging, collaboration patterns, and proven techniques",
-      "version": "4.2.0",
-      "source": "./",
-      "author": {
-        "name": "Jesse Vincent",
-        "email": "jesse@fsck.com"
-      }
+      "name": "superpower-ecc",
+      "repository": "https://github.com/FaisalAlqarni/superpower-ecc",
+      "branch": "main",
+      "description": "Integration of Superpowers and Everything Claude Code",
+      "author": "Faisal Alqarni",
+      "version": "1.0.0"
     }
   ]
 }
