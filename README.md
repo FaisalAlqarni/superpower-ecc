@@ -66,35 +66,74 @@ This project builds on the excellent work of:
 
 ## Installation
 
-**Note:** This is an independent integration project. For the original individual projects, see links above.
+### Quick Install (Recommended)
 
-### Manual Installation for Claude Code
+In Claude Code, run these two commands:
 
-1. Clone this repository:
 ```bash
-git clone https://github.com/FaisalAlqarni/superpower-ecc
+# 1. Register the marketplace
+/plugin marketplace add FaisalAlqarni/superpower-ecc
+
+# 2. Install the plugin
+/plugin install superpower-ecc@superpower-ecc
 ```
 
-2. Symlink to Claude Code plugins directory:
-```bash
-# On Windows
-mklink /D "%USERPROFILE%\.claude\plugins\superpower-ecc" "path\to\superpower-ecc"
+That's it! The plugin will be installed automatically.
 
-# On macOS/Linux
+### Manual Installation (Alternative)
+
+If you prefer manual installation:
+
+**1. Clone the repository:**
+```bash
+git clone https://github.com/FaisalAlqarni/superpower-ecc
+cd superpower-ecc
+```
+
+**2. Install dependencies (optional, for linting):**
+```bash
+npm install
+```
+
+**3. Create symlink to Claude Code plugins directory:**
+
+**Windows:**
+```bash
+mklink /D "%USERPROFILE%\.claude\plugins\superpower-ecc" "D:\path\to\superpower-ecc"
+```
+
+**macOS/Linux:**
+```bash
 ln -s /path/to/superpower-ecc ~/.claude/plugins/superpower-ecc
 ```
 
-3. Restart Claude Code
-
-### Original Projects
-
-To use the official versions instead:
-- **Superpowers**: `/plugin install superpowers@superpowers-marketplace`
-- **Everything Claude Code**: See [installation guide](https://github.com/affaan-m/everything-claude-code)
+**4. Restart Claude Code**
 
 ### Verify Installation
 
-Start a new session and ask Claude to help with something that would trigger a skill (e.g., "help me plan this feature" or "let's debug this issue"). Claude should automatically invoke the relevant superpowers skill.
+Start a new Claude Code session and try:
+- Ask: "help me plan this feature" → Should trigger `superpowers:brainstorming`
+- Type: `/ecc:test-coverage` → Should show the command
+- Use: `@build-error-resolver` → Should load the agent
+
+### Updating
+
+**If installed via marketplace:**
+```bash
+/plugin update superpower-ecc
+```
+
+**If installed manually:**
+```bash
+cd /path/to/superpower-ecc
+git pull
+```
+
+### Original Projects
+
+For the individual source projects:
+- **Superpowers v4.1.1**: [github.com/obra/superpowers](https://github.com/obra/superpowers)
+- **Everything Claude Code v1.4.1**: [github.com/affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code)
 
 
 ## Layer 1: The Systematic Workflow
