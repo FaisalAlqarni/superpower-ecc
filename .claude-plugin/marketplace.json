@@ -3,23 +3,18 @@
   "description": "Marketplace for Superpower-ECC plugin",
   "owner": {
     "name": "Faisal Alqarni",
-    "url": "https://github.com/FaisalAlqarni"
+    "email": ""
   },
   "plugins": [
     {
       "name": "superpower-ecc",
       "description": "Integration of Superpowers and Everything Claude Code",
+      "version": "1.0.0",
+      "source": "./",
       "author": {
         "name": "Faisal Alqarni",
-        "email": "",
-        "url": "https://github.com/FaisalAlqarni"
-      },
-      "source": {
-        "type": "github",
-        "owner": "FaisalAlqarni",
-        "repo": "superpower-ecc"
-      },
-      "version": "1.0.0"
+        "email": ""
+      }
     }
   ]
 }
