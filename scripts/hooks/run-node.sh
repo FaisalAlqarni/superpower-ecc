@@ -2,6 +2,27 @@
 # Cross-platform Node.js wrapper for Claude Code hooks
 # Finds and executes node in common installation locations
 
+# Convert Windows paths to WSL paths if running in WSL
+# Check if we're in WSL by looking for /proc/version with "Microsoft" or "WSL"
+if grep -qi "microsoft\|wsl" /proc/version 2>/dev/null; then
+    # Running in WSL - convert Windows drive letters (C:\, D:\) to WSL format (/mnt/c/, /mnt/d/)
+    # This handles cases where Claude Code passes Windows paths to WSL bash
+    args=()
+    for arg in "$@"; do
+        # Match Windows absolute paths like C:\... or C:/...
+        if [[ "$arg" =~ ^([A-Za-z]):[\\/] ]]; then
+            drive="${BASH_REMATCH[1]}"
+            drive_lower=$(echo "$drive" | tr '[:upper:]' '[:lower:]')
+            # Convert C:\path or C:/path to /mnt/c/path
+            wsl_path=$(echo "$arg" | sed -E "s|^[A-Za-z]:[\\/]|/mnt/${drive_lower}/|" | sed 's|\\|/|g')
+            args+=("$wsl_path")
+        else
+            args+=("$arg")
+        fi
+    done
+    set -- "${args[@]}"
+fi
+
 # Try to find node in PATH first (works on Mac/Linux and properly configured Windows)
 if command -v node >/dev/null 2>&1; then
     exec node "$@"
